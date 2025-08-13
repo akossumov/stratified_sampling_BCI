@@ -5,7 +5,6 @@ SRSWOR <- function(population_data, n, seed){
   population_size <- nrow(population_data)
   
   ###### Sampling of grid cells
-  #set.seed(271199)
   set.seed(seed)
   
   units_srswor <- sample(population_size, size = n, replace = FALSE)
@@ -87,7 +86,6 @@ PROP_ALLOC <- function(population_data, vec_strata, n, seed){
   
   ###### Sampling of grid cells
   ord <- unique(population_data$stratum)
-  #set.seed(271199)
   set.seed(seed)
   
   units_prop <- sampling::strata(
